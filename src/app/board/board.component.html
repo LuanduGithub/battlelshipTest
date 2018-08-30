@@ -1,0 +1,27 @@
+<div class="img-logo"></div>
+<div class="board">
+  <div class="board-row-header">
+    <div></div>
+    <div *ngFor="let boardHeader of boardHeaders">{{boardHeader.letter}}</div>
+  </div>
+  <div class="board-row-body" *ngFor="let boardBody of boarBodys">
+    <div *ngFor="let cell of boardBody.line; let i = index" class="{{cell.class}}" [ngClass]="{'sunk': cell.sunk, 'missed': cell.missed}">
+      <button type="button" (click)="getCell(cell, i)" [disabled]="cell.sunk || cell.missed">
+        {{cell.number}}
+      </button>
+    </div>
+  </div>
+</div>
+<div class="panel-score">
+  <div class="shots">Shots: {{shots}} / {{shotsAmount}}</div>
+  <div class="ships-sunken">
+    <div class="ship-list-title">Sunken Ships:</div>
+    <div *ngFor="let ship of shipsSunks" class="ship-list">{{ship}}</div>
+  </div>
+</div>
+
+<div class="missed-message" *ngIf="missed  || sunk"></div>
+<div class="missed-message-container" *ngIf="missed || sunk">
+  <div>{{message}}</div>
+  <button (click)="missed = !missed || sunk = !sunk">{{buttonMessage}}</button>
+</div>

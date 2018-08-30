@@ -1,0 +1,60 @@
+.landing {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  .img-content {
+    width: 30%;
+    height: 70%;
+    margin: 0 auto;
+    background: url(../../assets/img/portal/landing-img.png) no-repeat;
+    background-size: 100%;
+  }
+  .btn-difficulty {
+    background: none;
+    padding: 15px 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #56781a;
+    color: #56781a;
+    margin: 0 5px 20px;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background-color: #56781a;
+      color: #fff;
+    }
+  }
+  .active {
+    background-color: #56781a;
+    color: #fff;
+  }
+  .button-play {
+    border: 0;
+    padding: 0;
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    outline: none;
+    background: url(../../assets/buttons/start.png) no-repeat;
+    background-size: 100%;
+    &:hover {
+      background: url(../../assets/buttons/start-hover.png) no-repeat;
+      background-size: 100%;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+      left: 1px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img-content {
+    margin: 150px auto 100px !important;
+    width: 70% !important;
+    height: 30% !important;
+  }
+}

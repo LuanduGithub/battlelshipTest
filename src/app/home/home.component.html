@@ -1,0 +1,7 @@
+<section class="landing">
+  <div class="img-content"></div>
+  <button class="btn-difficulty" [ngClass]="{'active': easy}" type="button" (click)="setDifficulty('easy');">Easy</button>
+  <button class="btn-difficulty" [ngClass]="{'active': medium}" type="button" (click)="setDifficulty('medium')">Medium</button>
+  <button class="btn-difficulty" [ngClass]="{'active': hard}" type="button" (click)="setDifficulty('hard')">Hard</button><br>
+  <button class="button-play" (click)="gotoBoard();"></button>
+</section>
